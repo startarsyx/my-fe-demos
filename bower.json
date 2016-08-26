@@ -1,0 +1,17 @@
+{
+  "name": "my-fe-demos",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "startar <startar@foxmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/startarsyx/my-fe-demos",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

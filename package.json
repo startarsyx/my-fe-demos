@@ -1,0 +1,22 @@
+{
+  "name": "my-fe-demos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/startarsyx/my-fe-demos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/startarsyx/my-fe-demos/issues"
+  },
+  "homepage": "https://github.com/startarsyx/my-fe-demos#readme",
+  "devDependencies": {
+    "bower": "^1.7.9"
+  }
+}
