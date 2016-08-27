@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="demos">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>My FE Demos</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" type="text/css" href="bower_components/angular/angular-csp.css" />
+    <script src="bower_components/less/dist/less.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
-<body>
-    
+<body ng-controller="DemoListController">
+
+<section ng-cloak>
+    <h3>Demo Files</h3>
+    <ul>
+        <li ng-repeat="file in file_list | orderBy:'file_path'"><a ng-href="{{file.file_path}}" title="aaa">{{file.file_path}}</a></li>
+    </ul>
+</section>
+
+
+
+<script src="bower_components/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+    var demos = angular.module('demos', []);
+    demos.controller('DemoListController', ['$scope', '$http', function($scope, $http) {
+        $scope.file_list = [];
+        $http.get('demo_files.json').then(function(resp) {
+            $scope.file_list = resp.data;
+        })
+    }]);
+</script>
+
 </body>
 </html>
