@@ -42,7 +42,10 @@
     }
 }
 
-
+/*
+    思路：把原本的checkbox隐藏掉，直接用:before添加一个自定义样式的块。
+    用:checked选择器来指定选中后的样式。
+*/
 .my-checkbox {
     >label {
         position: relative;
@@ -60,6 +63,7 @@
                 background-size: cover;
             }
             &:after {
+                // 这个是为了把unchecked.svg提前加载进来
                 display: none;
                 content: '';
                 background: url(unchecked.svg) no-repeat;
