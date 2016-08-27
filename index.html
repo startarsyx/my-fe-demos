@@ -9,10 +9,15 @@
 </head>
 <body ng-controller="DemoListController">
 
+<section>
+    <h3>Github</h3>
+    <a href="https://github.com/startarsyx/my-fe-demos">https://github.com/startarsyx/my-fe-demos</a>
+</section>
+
 <section ng-cloak>
     <h3>Demo Files</h3>
     <ul>
-        <li ng-repeat="file in file_list | orderBy:'file_path'"><a ng-href="{{file.file_path}}" title="aaa">{{file.file_path}}</a></li>
+        <li ng-repeat="file in file_list | orderBy:'file_path'"><a ng-href="{{file.file_path}}">{{file.file_path}}</a></li>
     </ul>
 </section>
 
