@@ -50,7 +50,7 @@
             visibility: hidden;
             &:before {
                 visibility: visible;
-                content: ' ';
+                content: '';
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -59,15 +59,14 @@
                 background: url(checked.svg) no-repeat;
                 background-size: cover;
             }
+            &:after {
+                display: none;
+                content: '';
+                background: url(unchecked.svg) no-repeat;
+            }
         }
         >input[type="checkbox"]:checked {
             &:before {
-                content: ' ';
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 1.5em;
-                height: 1.5em;
                 background: url(unchecked.svg) no-repeat;
                 background-size: cover;
             }
